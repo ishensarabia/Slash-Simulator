@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "Slash-Simulator",
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {

@@ -51,15 +51,15 @@ function GuiModule.JoinButton()
 
 end
 
-function GuiModule.ShowPrestiges()
-    local tween = require(playerGui:WaitForChild("LevelGUI").Animator).OpenPrestiges
-    tween:Play()
-end
+-- function GuiModule.ShowPrestiges()
+--     local tween = require(playerGui:WaitForChild("LevelGUI").Animator).OpenPrestiges
+--     tween:Play()
+-- end
 
-function GuiModule.HidePrestiges()
-    local tween = require(playerGui:WaitForChild("LevelGUI").Animator).ClosePrestiges
-    tween:Play()
-end
+-- function GuiModule.HidePrestiges()
+--     local tween = require(playerGui:WaitForChild("LevelGUI").Animator).ClosePrestiges
+--     tween:Play()
+-- end
 
 
 return GuiModule;
