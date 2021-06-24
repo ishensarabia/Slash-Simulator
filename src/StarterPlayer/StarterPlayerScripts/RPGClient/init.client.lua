@@ -342,9 +342,10 @@ players.LocalPlayer.CompletedQuests.ChildAdded:Connect(UpdateMarkers)
 players.LocalPlayer.CompletedQuests.ChildRemoved:Connect(UpdateMarkers)
 
 -- Load default environment
-if workspace.Areas:FindFirstChildOfClass("Folder") then
-	require(updateEnvironment).LoadArea(workspace.Areas:FindFirstChildOfClass("Folder").Name)
-end
+local areaName = workspace.Remotes.ReturnToSpawn:InvokeServer()
+	if areaName then
+		require(updateEnvironment).LoadArea(areaName)
+	end
 
 game:GetService("RunService"):BindToRenderStep("UI", 50, function() -- Update and animate health UI
 	if players.LocalPlayer.Character and players.LocalPlayer.Character:FindFirstChild("Humanoid") then

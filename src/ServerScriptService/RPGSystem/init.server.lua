@@ -1,4 +1,4 @@
--- Made by Chrythm
+-- Made by Sci_Punk
 
 local players = game:GetService("Players")
 local replicatedStorage = game:GetService("ReplicatedStorage")

@@ -1,4 +1,4 @@
---[[																																																						Chrythm
+--[[																																																						Sci_Punk
 	,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 	[ Sci_Punk's																				]
 	]  _______________________       ________________________      _______________________  [
@@ -67,7 +67,7 @@
 	
 	with that out of the way...
 	
-	Welcome to Chrythm's RPG Kit! Most of this kit was developed live on my Twitch channel ChrythmDev so feel free to
+	Welcome to Sci_Punk's RPG Kit! Most of this kit was developed live on my Twitch channel Sci_PunkDev so feel free to
 	take a look at how it was made if you are interested.
 	The first thing you'll want to know is the way everything is structured. Here's a brief description of how the server side
 	is organized:

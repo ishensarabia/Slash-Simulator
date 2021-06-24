@@ -56,7 +56,7 @@ function module.Save(player)
 				table.insert(completedQuests, completedQuest.Name)
 			end
 			local saveFile = {items, stats, armors, attributes, quests, completedQuests}
-			game:GetService("DataStoreService"):GetDataStore("Save"):SetAsync(player.UserId, saveFile)
+			game:GetService("DataStoreService"):GetDataStore("1"):SetAsync(player.UserId, saveFile)
 		end)
 		if status ~= true then
 			print(player.Name .. " couldn't save, retrying... \n" .. message)
@@ -71,7 +71,7 @@ end
 function module.Load(player)
 	if players:FindFirstChild(player.Name) then
 		local status = pcall(function()
-			local saveFile = game:GetService("DataStoreService"):GetDataStore("Save"):GetAsync(player.UserId)
+			local saveFile = game:GetService("DataStoreService"):GetDataStore("1"):GetAsync(player.UserId)
 			if saveFile then
 				if saveFile[1] then
 					for _,item in pairs(saveFile[1]) do -- Items
@@ -252,12 +252,14 @@ function module.PlayerAdded(player)
 		local function FindCurrentArea()
 			for _,area in pairs(workspace.Areas:GetChildren()) do
 				if serverSettings.DefaultSpawnLocation.Value:IsDescendantOf(area) then
+					warn("Found starting")
 					return area
 				end
 			end
 		end
 		local starterArea = FindCurrentArea()
 		if starterArea then
+			warn("Setting the current area")
 			currentArea.Value = starterArea
 		end
 	end
